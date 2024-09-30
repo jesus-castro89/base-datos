@@ -1,6 +1,6 @@
 # Solicitar Licencia Educativa
 
-Para instalar CLion, primero debes solicitar una **<tooltip term="Licencia-Educativa">Licencia Educativa</tooltip>** en
+Para instalar CLion, primero debes solicitar una **Licencia Educativa** en
 el sitio web de JetBrains. Sigue estos pasos para obtener tu licencia:
 
 1. Ve al sitio web de
