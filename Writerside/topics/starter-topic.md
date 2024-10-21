@@ -1,4 +1,4 @@
-# Base de Datos para Ingeniería / Diseño de Bases de Datos
+# Diseño de Bases de Datos
 
 ## Introducción
 
