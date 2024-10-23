@@ -105,3 +105,60 @@ Resultado:
 | 4  | Ana    | Informática | 4             | 101      | Álgebra Lineal | 4        |
 | 5  | Luis   | Matemáticas | 5             | 102      | Cálculo I      | 5        |
 | 5  | Luis   | Matemáticas | 5             | 103      | Programación   | 6        |
+
+#### Intersección
+
+La intersección entre los estudiantes de Informática y los estudiantes de Matemáticas se puede expresar como:
+
+```tex
+Estudiantes_{(Carrera = 'Informática')} ∩ Estudiantes_{(Carrera = 'Matemáticas')}
+```
+
+Resultado:
+
+| ID | Nombre | Carrera     |
+|----|--------|-------------|
+| 1  | Juan   | Informática |
+| 4  | Ana    | Informática |
+| 2  | María  | Matemáticas |
+| 5  | Luis   | Matemáticas |
+
+#### Diferencia
+
+La diferencia entre los estudiantes de Informática y los estudiantes de Matemáticas se puede expresar como:
+
+```tex
+Estudiantes_{(Carrera = 'Informática')} - Estudiantes_{(Carrera = 'Matemáticas')}
+```
+
+Resultado:
+
+| ID | Nombre | Carrera     |
+|----|--------|-------------|
+| 3  | Pedro  | Física      |
+
+#### Producto Cartesiano
+
+El producto cartesiano entre los estudiantes y los cursos se puede expresar como:
+
+```tex
+Estudiantes × Cursos
+```
+
+Resultado:
+
+| ID | Nombre | Carrera     | ID  | Nombre         | Créditos |
+|----|--------|-------------|-----|----------------|----------|
+| 1  | Juan   | Informática | 101 | Álgebra Lineal | 4        |
+| 1  | Juan   | Informática | 102 | Cálculo I      | 5        |
+| 1  | Juan   | Informática | 103 | Programación   | 6        |
+| 1  | Juan   | Informática | 104 | Física I       | 4        |
+| 2  | María  | Matemáticas | 101 | Álgebra Lineal | 4        |
+| 2  | María  | Matemáticas | 102 | Cálculo I      | 5        |
+| 2  | María  | Matemáticas | 103 | Programación   | 6        |
+| 2  | María  | Matemáticas | 104 | Física I       | 4        |
+| 3  | Pedro  | Física      | 101 | Álgebra Lineal | 4        |
+| 3  | Pedro  | Física      | 102 | Cálculo I      | 5        |
+| 3  | Pedro  | Física      | 103 | Programación   | 6        |
+
+## Conclusiones

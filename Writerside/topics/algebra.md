@@ -70,25 +70,6 @@ entre los estudiantes de un curso y los estudiantes de otro curso se puede expre
 EstudiantesCurso1 ∩ EstudiantesCurso2 = EstudiantesCurso1 - (EstudiantesCurso1 - EstudiantesCurso2)
 ```
 
-### División (÷)
-
-La operación de división (÷) permite obtener las filas de una relación que están relacionadas con todas las filas de
-otra relación. Por ejemplo, la división de los estudiantes que han aprobado todos los exámenes se puede expresar como:
-
-```tex
-Estudiantes ÷ Exámenes_Aprobados
-```
-
-### Renombramiento (ρ)
-
-La operación de renombramiento (ρ) permite cambiar el nombre de las columnas de una relación. Por ejemplo, el
-renombramiento de la relación de estudiantes con las columnas "Nombre" y "Apellido" como "Alumnos" se puede expresar
-como:
-
-```tex
-ρ_{(Nombre, Apellido) → (Alumno, Estudiante)}(Estudiantes)
-```
-
 ### Agrupamiento (Γ)
 
 La operación de agrupamiento (Γ) permite agrupar las filas de una relación en base a un criterio específico y aplicar
@@ -98,6 +79,14 @@ calificaciones se puede expresar como:
 ```tex
 Γ_{(Curso), SUM(Calificación)}(Estudiantes)
 ```
+
+Las funciones de agregación más comunes son:
+
+* SUM: suma
+* AVG: promedio
+* COUNT: conteo
+* MAX: máximo
+* MIN: mínimo
 
 ### Ordenamiento (τ)
 
@@ -115,6 +104,26 @@ columna. Por ejemplo, el join de los estudiantes y los cursos en base al código
 
 ```tex
 Estudiantes ⨝_{(Estudiantes.Curso = Cursos.Código)} Cursos
+```
+
+### Left Outer Join (⟕)
+
+La operación de left outer join (⨝<sub>L</sub>) permite combinar dos relaciones con base en una condición de igualdad
+entre
+los valores de una columna, manteniendo todas las filas de la relación de la izquierda. Por ejemplo, el left outer join
+de los estudiantes y los cursos se puede expresar como:
+
+```tex
+Estudiantes ⟕_{ (Estudiantes.Curso = Cursos.Código)} Cursos
+```
+
+### Right Outer Join (⟖)
+La operación de right outer join (⨝<sub>R</sub>) permite combinar dos relaciones con base en una condición de igualdad
+entre los valores de una columna, manteniendo todas las filas de la relación de la derecha. Por ejemplo, el right outer
+join de los estudiantes y los cursos se puede expresar como:
+
+```tex
+Estudiantes ⟖_{(Estudiantes.Curso = Cursos.Código)} Cursos
 ```
 
 ## Conclusiones
