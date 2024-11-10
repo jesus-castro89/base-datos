@@ -7,11 +7,15 @@
                  start-page="starter-topic.md">
 
     <toc-element topic="starter-topic.md"/>
-    <toc-element topic="licencias.md"/>
     <toc-element topic="clasification.md"/>
     <toc-element topic="models.md"/>
     <toc-element topic="er-model.md"/>
     <toc-element topic="algebra.md">
         <toc-element topic="algebra-example.md"/>
     </toc-element>
+    <toc-element topic="relational-model.md"/>
+    <toc-element topic="data-type.md"/>
+    <toc-element topic="column-restriction.md">
+    </toc-element>
+    <toc-element topic="er-to-relational.md"/>
 </instance-profile>

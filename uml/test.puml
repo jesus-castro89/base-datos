@@ -1,19 +1,42 @@
 @startchen
 
-entity CUSTOMER {
-  Number <<key>>
-  Name
+entity "Estudiante" as student {
+  estudiante_id <<key>>
+  nombre
+  edad
+  email <<multi>>
 }
 
-entity MOVIE {
-  Code <<key>>
+entity "Curso" as curse {
+  curso_id <<key>>
+  nombre
+  creditos
 }
 
-relationship RENTED_TO {
-  Date
+entity “Inscripción” as inscription <<weak>>{
+  inscripción_id <<key>>
+  fecha_inscripción
 }
 
-RENTED_TO -(1,N)- CUSTOMER
-RENTED_TO -(0,1)- MOVIE
+entity "Profesor" as teacher {
+  profesor_id <<key>>
+  nombre
+  email <<multi>>
+}
 
+relationship realizar {
+}
+
+relationship inscribir {
+}
+
+relationship impartir {
+}
+
+student -(1,N)- realizar
+realizar -(M,1)- inscription
+inscription -(1,N)- inscribir
+inscribir -(M,1)- curse
+curse -(1,N)- impartir
+impartir -(M,1)- teacher
 @endchen
