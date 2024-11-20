@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="58c1a2dc">
+        <description>Created after removal of "Solicitar Licencia Educativa" from Base de Datos para Ingeniería
+        </description>
+        <accepts>licencias.html</accepts>
+    </rule>
+    <rule id="6198d7bc">
+        <description>Created after removal of "Las Restricciones de los Atributos" from Base de Datos para Ingeniería
+        </description>
+        <accepts>restrictions.html</accepts>
+    </rule>
+</rules>
