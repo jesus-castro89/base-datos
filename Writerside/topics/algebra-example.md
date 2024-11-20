@@ -26,15 +26,15 @@ Supongamos que tenemos las siguientes relaciones en una base de datos de una uni
 
 ## Inscripciones
 
-| ID_Estudiante | ID_Curso |
-|---------------|----------|
-| 1             | 101      |
-| 1             | 103      |
-| 2             | 102      |
-| 3             | 104      |
-| 4             | 101      |
-| 5             | 102      |
-| 5             | 103      |
+| ID_Inscripción | ID_Curso | ID_Estudiante |
+|----------------|----------|---------------|
+| 1              | 101      | 1             |
+| 1              | 103      | 3             |
+| 2              | 102      | 5             |
+| 3              | 104      | 2             |
+| 4              | 101      | 4             |
+| 5              | 102      | 1             |
+| 5              | 103      | 3             |
 
 ### Operaciones
 
@@ -43,7 +43,7 @@ Supongamos que tenemos las siguientes relaciones en una base de datos de una uni
 La proyección de los nombres de los estudiantes inscritos en algún curso se puede expresar como:
 
 ```tex
-π_{(Nombre)}(Estudiantes ⨝ Inscripciones)
+π_{Nombre}(Estudiantes)
 ```
 
 Resultado:
@@ -69,12 +69,34 @@ Resultado:
 | 102 | Cálculo I    | 5        |
 | 103 | Programación | 6        |
 
+Las operaciones de selección y proyección se pueden combinar para obtener los nombres de los estudiantes inscritos en
+cursos con más de 4 créditos:
+
+```tex
+π_{Nombre}(Estudiantes ⨝ Inscripciones ⨝_{(ID_Curso = ID)} σ_{(Créditos > 4)}(Cursos))
+```
+
+Así mismo las condiciones de selección pueden usar las operaciones de comparación:
+
+* `=`: Igual a
+* `≠`: Diferente de
+* `>`: Mayor que
+* `<`: Menor que
+* `>=`: Mayor
+* `<=`: Menor o igual
+
+Y también pueden unirse más de dos condiciones con los operadores lógicos `∧` (Conjunción o Y) y `∨` (Disyunción ó O).
+
+```tex
+π_{nombre}(σ_{(carrera='Matemáticas' ∨ carrera='Física')}(Estudiante))
+```
+
 #### Unión
 
 La unión de los estudiantes de Informática y los estudiantes de Matemáticas se puede expresar como:
 
 ```tex
-Estudiantes_{(Carrera = 'Informática')} ∪ Estudiantes_{(Carrera = 'Matemáticas')}
+σ_{(carrera='Matemáticas')}(Estudiante) ∪ σ_{(carrera='Informática')}(Estudiante)
 ```
 
 Resultado:
@@ -133,9 +155,9 @@ Estudiantes_{(Carrera = 'Informática')} - Estudiantes_{(Carrera = 'Matemáticas
 
 Resultado:
 
-| ID | Nombre | Carrera     |
-|----|--------|-------------|
-| 3  | Pedro  | Física      |
+| ID | Nombre | Carrera |
+|----|--------|---------|
+| 3  | Pedro  | Física  |
 
 #### Producto Cartesiano
 

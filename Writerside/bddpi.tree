@@ -12,6 +12,9 @@
     <toc-element topic="models.md"/>
     <toc-element topic="er-model.md"/>
     <toc-element topic="algebra.md">
+        <toc-element topic="relax-calculator.md"/>
         <toc-element topic="algebra-example.md"/>
     </toc-element>
+    <toc-element topic="select.md"/>
+    <toc-element topic="funciones.md"/>
 </instance-profile>
