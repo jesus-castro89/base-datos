@@ -7,7 +7,6 @@
                  start-page="starter-topic.md">
 
     <toc-element topic="starter-topic.md"/>
-    <toc-element topic="licencias.md"/>
     <toc-element topic="clasification.md"/>
     <toc-element topic="models.md"/>
     <toc-element topic="er-model.md"/>
