@@ -19,5 +19,6 @@
     <toc-element topic="er-to-relational.md"/>
     <toc-element topic="column-restriction.md"/>
     <toc-element topic="select.md"/>
+    <toc-element topic="where.md"/>
     <toc-element topic="funciones.md"/>
 </instance-profile>
