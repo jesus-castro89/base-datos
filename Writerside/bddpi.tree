@@ -21,6 +21,7 @@
     <toc-element topic="select.md"/>
     <toc-element topic="where.md"/>
     <toc-element topic="funciones.md"/>
+    <toc-element topic="like.md"/>
     <toc-element topic="join.md">
         <toc-element topic="example-join.md"/>
     </toc-element>
